@@ -8,7 +8,7 @@ Python 사이킷 런 모듈로 회귀 분석하여 다음날 코로나 감염자
 개발 : 이승용
 제안서 : 최인근, 황성윤
 발표자 : 미정
-개발 상태 : 완료
+개발 상태 : 진행중
 ```
 ### 최소 제곱법 식 및 선 회귀 식
 ![image](https://user-images.githubusercontent.com/35417717/167340593-2e8547bc-eb9f-47e4-931c-de6f67ac992e.png)
