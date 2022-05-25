@@ -47,10 +47,10 @@ def ls(x, y):
         numerator /= denominator
         b = pY - (numerator * pX)
 
-        for i in range(500):
-            gX.append(len(x) + i)
-            print(f"{numerator} * {len(x) + i} + {b} = "+str(fx(len(x) + i, numerator, b)))
-            gY.append(fx(len(x) + i, numerator, b))
+        for i in range(len(x)):
+            #gX.append(len(x) + i)
+            #print(f"{numerator} * {len(x) + i} + {b} = "+str(fx(len(x) + i, numerator, b)))
+            gY.append(fx(x[i], numerator, b))
 
         
     return [fx(len(x), numerator, b), pX, pY, numerator]
@@ -104,10 +104,13 @@ print("Next predicted number of infected people : "+ str(data[0]))
 f, plot = pPlot.subplots(1, 2)
 f.set_size_inches((20, 15))
 
-plot[0].scatter(gX, gY, color='g', label= 'regression coefficient value')
+sx = np.arange(-5.0, 5.0, 0.1)
+sy = sigmoid(sx)
+
+plot[0].scatter(sx, sy, color='g', label= 'sigmoid graph')
 plot[0].legend(fontsize=20)
     
-pPlot.plot(x, yy, color='b', label='independent variable')
-pPlot.scatter(x, y, color='r', label='dependent variable')
+pPlot.plot(x, y, color='b', label='independent variable')
+pPlot.plot(x, gY, color='r', label='regression y')
 pPlot.legend(fontsize=20)
 pPlot.show()
