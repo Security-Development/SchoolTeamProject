@@ -48,7 +48,7 @@ def ls(x, y):
         b = pY - (numerator * pX)
 
         for i in range(len(x)):
-            #gX.append(len(x) + i)
+            gX.append(len(x) + i)
             #print(f"{numerator} * {len(x) + i} + {b} = "+str(fx(len(x) + i, numerator, b)))
             gY.append(fx(x[i], numerator, b))
 
