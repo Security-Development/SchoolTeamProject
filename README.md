@@ -19,4 +19,4 @@ Python 코로나 감염자 선형회귀 분석
 ![image](https://user-images.githubusercontent.com/35417717/170186303-d835dafa-20ac-4860-899e-0ab7346900f0.png)
 
 ### 데이터 시각화 그래프
-![image](https://user-images.githubusercontent.com/35417717/170186245-588d3322-5e69-438d-ac2e-1b886bfad149.png)
+![image](https://user-images.githubusercontent.com/35417717/170197327-ab3d1c6c-f336-4abe-a646-d4a6f5123130.png)
