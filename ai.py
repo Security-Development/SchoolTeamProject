@@ -8,7 +8,25 @@ gY = []
 
 def fx(x, a, b):
     return (a * x) + b
-    
+
+# 시그모이드
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+# LSTM 수식
+#def formula(x, y, z):
+    #forget gate
+    #return sigmoid(np.dot(xt, x) + np.dot(y, ht) + z)
+
+# LSTM
+#def lstm(x):
+    #ft = formula(wf, uf, bf)
+    #it = formula(wi, ui, bi)
+    #ot = formula(wo, uo, bo)
+    #ct =  ft * ct_1 + it * sigmoid(np.dot(wc,xt) + np.dot(uc, ht_1 + bc)
+    #ht = ot * (np.sinh(ct) / np.cosh(ct))
+    #print(1)
+        
 # 최소제곱법
 def ls(x, y):
     global gY, gX
@@ -51,6 +69,9 @@ count = 1
 # 데이터 가공
 for i in df['Unnamed: 2'][5:]:
     if i == '-':
+        x.append(count)
+        y.append(0)
+        count += 1
         continue
     x.append(count)
     y.append(i)
@@ -90,4 +111,3 @@ pPlot.plot(x, yy, color='b', label='independent variable')
 pPlot.scatter(x, y, color='r', label='dependent variable')
 pPlot.legend(fontsize=20)
 pPlot.show()
-
