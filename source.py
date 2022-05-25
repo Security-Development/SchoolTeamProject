@@ -67,12 +67,8 @@ y = []
 count = 1
 
 # 데이터 가공
-for i in df['Unnamed: 2'][5:]:
-    if i == '-':
-        x.append(count)
-        y.append(0)
-        count += 1
-        continue
+for i in df['Unnamed: 1'][5:]:
+    #printf(i)
     x.append(count)
     y.append(i)
     count += 1
@@ -85,8 +81,6 @@ bias = bias(weight, data[1], data[1])
 
 yy = weight * np.asarray(x) + bias # regression coefficient 
 
-
-
 print("\n"+"= "*100+"\n")
 print("independent variable : "+ str(x))
 print("\n"+"= "*100 +"\n")
@@ -95,13 +89,13 @@ print("\n"+"= "*100+"\n")
 print("weight : "+str(weight))
 print("bias : "+str(bias))
 print("regression coefficient : "+str(yy))
-print("Next predicted number of infected people : "+ str(data[0]))
+#print("Next predicted number of infected people : "+ str(data[0]))
 
 
 
 
 # 데이터 시각화
-f, plot = pPlot.subplots(1, 2)
+f, plot = pPlot.subplots(1, 3)
 f.set_size_inches((20, 15))
 
 sx = np.arange(-5.0, 5.0, 0.1)
@@ -109,6 +103,9 @@ sy = sigmoid(sx)
 
 plot[0].scatter(sx, sy, color='g', label= 'sigmoid graph')
 plot[0].legend(fontsize=20)
+
+plot[1].plot(x, yy, color='g', label= 'regression coefficient')
+plot[1].legend(fontsize=20)
     
 pPlot.plot(x, y, color='b', label='independent variable')
 pPlot.plot(x, gY, color='r', label='regression y')
