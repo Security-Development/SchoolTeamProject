@@ -16,7 +16,7 @@ Python 코로나 감염자 선형회귀 분석
 
 
 ### 기대 값
-![image](https://user-images.githubusercontent.com/35417717/167340289-165a3e55-e942-4626-9804-6de75c0ca650.png)
+![image](https://user-images.githubusercontent.com/35417717/170186303-d835dafa-20ac-4860-899e-0ab7346900f0.png)
 
 ### 데이터 시각화 그래프
 ![image](https://user-images.githubusercontent.com/35417717/170186245-588d3322-5e69-438d-ac2e-1b886bfad149.png)
